@@ -1,0 +1,3 @@
+# Optional Endoscapes2023 bounding-box localizer.
+# Install after the CUDA-compatible torch/torchvision pair in requirements.txt.
+ultralytics==8.3.169

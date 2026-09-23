@@ -1,0 +1,14 @@
+# Runtime used by scripts/serve_qwen3_vl_openai.py.
+# Install a CUDA-compatible torch/torchvision build for the destination GPU first
+# if the default PyPI wheels are not suitable for that machine.
+torch==2.7.0
+torchvision==0.22.0
+transformers==4.57.6
+accelerate==1.10.1
+safetensors==0.5.3
+fastapi==0.115.13
+uvicorn==0.34.3
+pydantic==2.11.7
+pillow==11.2.1
+openai==1.90.0
+

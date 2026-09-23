@@ -1,0 +1,33 @@
+{
+  "schema_version": "atomic_predicate_spec_v1",
+  "task": "critical_view_of_safety",
+  "criteria": {
+    "two_structures": {
+      "requirement": "Exactly two tubular structures, the cystic duct and cystic artery, are visibly seen entering the gallbladder.",
+      "facts": [
+        {"key": "cystic_duct_visible", "predicate_type": "entity", "description": "A cystic duct is directly visible and distinguishable from tools and background tissue.", "required": true, "locator_classes": ["cystic_duct"]},
+        {"key": "cystic_artery_visible", "predicate_type": "entity", "description": "A cystic artery is directly visible and distinguishable from tools and background tissue.", "required": true, "locator_classes": ["cystic_artery"]},
+        {"key": "duct_enters_gallbladder", "predicate_type": "relation", "description": "The visible cystic duct can be followed to its entry into the gallbladder.", "required": true, "locator_classes": ["cystic_duct", "gallbladder"]},
+        {"key": "artery_enters_gallbladder", "predicate_type": "relation", "description": "The visible cystic artery can be followed to its entry into the gallbladder.", "required": true, "locator_classes": ["cystic_artery", "gallbladder"]},
+        {"key": "exactly_two_tubular_structures", "predicate_type": "relation", "description": "Exactly two non-tool tubular structures are visible entering the gallbladder; no third tubular structure is visible.", "required": true, "locator_classes": ["cystic_duct", "cystic_artery", "gallbladder"]}
+      ]
+    },
+    "cystic_plate": {
+      "requirement": "The lower one third of the gallbladder is dissected off the cystic plate so the plate is exposed.",
+      "facts": [
+        {"key": "gallbladder_lower_third_visible", "predicate_type": "entity", "description": "The lower one third of the gallbladder is directly visible with adequate spatial context.", "required": true, "locator_classes": ["gallbladder"]},
+        {"key": "lower_third_separated_from_liver_bed", "predicate_type": "state", "description": "The lower one third of the gallbladder is visibly separated from the liver bed rather than merely being manipulated.", "required": true, "locator_classes": ["gallbladder", "cystic_plate"]},
+        {"key": "cystic_plate_exposed", "predicate_type": "state", "description": "The cystic plate or exposed liver-bed plane is directly visible beneath the separated gallbladder.", "required": true, "locator_classes": ["cystic_plate", "gallbladder"]}
+      ]
+    },
+    "hepatocystic_triangle": {
+      "requirement": "The hepatocystic triangle is cleared of fat and fibrous tissue.",
+      "visual_calibration": "First localize the hepatocystic triangle itself between the lower gallbladder/cystic structures and the inferior liver edge. Residual yellow fat elsewhere in the image or adjacent to, but outside, that triangle does not contradict clearance. Blood staining also does not by itself contradict clearance. Use no only when fat or fibrous tissue visibly occupies the triangle and obscures its relevant boundaries. Use unknown rather than no when a tool, blood pool, or viewpoint prevents assessment. The triangle may be cleared even when neighboring tissue is still fatty; judge the location of tissue, not the mere presence of yellow pixels.",
+      "facts": [
+        {"key": "hepatocystic_triangle_visible", "predicate_type": "entity", "description": "The hepatocystic triangle region is directly visible with enough context to assess it.", "required": true, "locator_classes": ["calot_triangle", "gallbladder"]},
+        {"key": "triangle_fat_cleared", "predicate_type": "state", "description": "Fat and fibrous tissue are visibly cleared from the hepatocystic triangle rather than still obscuring it.", "required": true, "locator_classes": ["calot_triangle"]},
+        {"key": "triangle_boundaries_exposed", "predicate_type": "state", "description": "The relevant boundaries of the cleared triangle are visibly exposed and not hidden by tissue or tools.", "required": true, "locator_classes": ["calot_triangle", "gallbladder"]}
+      ]
+    }
+  }
+}

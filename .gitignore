@@ -1,0 +1,37 @@
+# Source-only allowlist: ignore every artifact unless explicitly allowed.
+*
+!*/
+!*.py
+!*.sh
+!requirements*.txt
+!README.md
+!.gitignore
+!/specs/*.md
+!/configs/cvs_atomic_predicates_v1.json
+!/configs/endoscapes_cvs_skill_prompts_v1.json
+!/tool_augment/constrained_assessment/sops.example.json
+
+# Do not permit executable copies inside generated or private directories.
+**/runs/**
+**/outputs/**
+**/output/**
+**/results/**
+**/logs/**
+**/reports/**
+**/data/**
+**/datasets/**
+**/inputs/**
+**/cases/**
+**/fixtures/**
+**/annotations/**
+**/models/**
+**/weights/**
+**/checkpoints/**
+**/experiments/**
+**/reproductions/**
+**/compiled_skills/**
+**/.runtime*/**
+**/.venv*/**
+**/__pycache__/**
+**/.pytest_cache/**
+**/.git/**

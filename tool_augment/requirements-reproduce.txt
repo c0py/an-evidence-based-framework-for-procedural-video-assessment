@@ -1,0 +1,10 @@
+# Supplemental wheels installed into .runtime; existing .venv-qwen3vl supplies
+# torch 2.7.0+cu126, ultralytics 8.3.169, Pillow, matplotlib and other dependencies.
+mediapipe==0.10.9
+numpy==1.26.4
+opencv-contrib-python==4.11.0.86
+protobuf==4.25.3
+flatbuffers==25.12.19
+sounddevice==0.5.6
+cffi==2.1.1
+imageio-ffmpeg==0.6.0

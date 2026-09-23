@@ -1,0 +1,49 @@
+{
+  "schema_version": "endoscapes_cvs_skill_prompts_v1",
+  "criterion_order": [
+    "two_structures",
+    "cystic_plate",
+    "hepatocystic_triangle"
+  ],
+  "source_note": "Criterion definitions follow the CVS protocol; concise prompt wording is informed by the public CVS-AdaptNet prompt interface.",
+  "source_repository": "https://github.com/CAMMA-public/CVS-AdaptNet",
+  "source_commit": "bb21ffbd781b6f943be0daaeeccf1567c21e691d",
+  "criteria": {
+    "two_structures": {
+      "positive": [
+        "The gallbladder is attached only to two tubular structures: the cystic duct and the cystic artery.",
+        "Only the cystic duct and cystic artery remain visibly connected to the gallbladder.",
+        "Exactly two tubular structures enter the gallbladder, corresponding to the cystic duct and cystic artery."
+      ],
+      "negative": [
+        "The cystic duct and cystic artery are not both clearly identified as the only structures attached to the gallbladder.",
+        "More than two structures or unclear tissue connections remain attached to the gallbladder.",
+        "The two tubular structures entering the gallbladder cannot yet be distinguished with confidence."
+      ]
+    },
+    "cystic_plate": {
+      "positive": [
+        "The lower gallbladder is separated from the liver bed and the cystic plate is clearly exposed.",
+        "Dissection of the lower gallbladder from the liver reveals the cystic plate.",
+        "The lower third of the gallbladder has been lifted from the liver bed with the cystic plate visible."
+      ],
+      "negative": [
+        "The lower gallbladder remains attached to the liver bed and the cystic plate is not clearly exposed.",
+        "Residual tissue obscures separation of the lower gallbladder from the liver and hides the cystic plate.",
+        "The cystic plate is absent or incompletely visible because liver-bed dissection is insufficient."
+      ]
+    },
+    "hepatocystic_triangle": {
+      "positive": [
+        "The hepatocystic triangle is fully cleared of fat and fibrous connective tissue.",
+        "Fat and connective tissue have been removed from the hepatocystic triangle to provide an unobstructed view.",
+        "The Calot triangle is completely dissected and its anatomy is clearly visible."
+      ],
+      "negative": [
+        "Fat or fibrous connective tissue still obscures the hepatocystic triangle.",
+        "The Calot triangle is not fully dissected and its anatomy remains unclear.",
+        "Residual tissue prevents an unobstructed view through the hepatocystic triangle."
+      ]
+    }
+  }
+}

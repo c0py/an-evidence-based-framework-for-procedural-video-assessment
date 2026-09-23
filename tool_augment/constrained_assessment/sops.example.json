@@ -1,0 +1,48 @@
+{
+  "version": "generic_example",
+  "provenance": {
+    "scope": "Illustrative configuration only; replace with requirements and settings appropriate to your task."
+  },
+  "criteria": {
+    "trocar_layout": {
+      "text": "Assess the projected layout using the configured angle band and qualitative symmetry requirement.",
+      "interpretation": "Trocar endpoints define the triangle; the navel is a reference landmark. Distinguish missing measurements from deviations.",
+      "tool_id": "measure_trocar_geometry",
+      "roi_xyxy": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "apex_reference_band_deg": [
+        110.0,
+        130.0
+      ],
+      "limits": "Projected geometry does not establish three-dimensional placement."
+    },
+    "circular_disinfection": {
+      "text": "Assess circular wiping around the target region.",
+      "interpretation": "Use the target-relative trajectory; do not infer sterilization effectiveness from the visible path.",
+      "tool_id": "measure_disinfection_path",
+      "roi_xyxy": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "limits": "Coverage is an image-plane proxy."
+    },
+    "hand_press": {
+      "text": "Assess whether the visible hand posture is consistent with pressing.",
+      "interpretation": "Use finger configuration, placement and temporal support. Configure the ROI for the supplied video.",
+      "tool_id": "measure_hand_pose",
+      "roi_xyxy": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "limits": "Hand pose does not measure physical pressure."
+    }
+  }
+}

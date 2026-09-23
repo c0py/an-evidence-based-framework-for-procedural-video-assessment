@@ -1,0 +1,2 @@
+# Additional dependencies for schema validation and the core unit checks.
+jsonschema>=4.0,<5
